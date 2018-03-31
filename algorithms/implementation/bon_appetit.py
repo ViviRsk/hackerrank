@@ -15,9 +15,8 @@ integer.
 
 
 def split_costs(k, price_list, charged):
-    return "Bon Appetit" \
-        if (sum(price_list) - price_list[k]) // 2 == charged \
-        else price_list[k] // 2
+    val = charged - (sum(price_list) - price_list[k]) // 2
+    return "Bon Appetit" if val == 0 else val
 
 
 n, k = input().split()
